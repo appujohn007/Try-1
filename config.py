@@ -8,8 +8,8 @@ import dotenv
 from logging.handlers import RotatingFileHandler
 
 #force user to join your backup channel leave 0 if you don't need.
-FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "0"))
-FORCE_SUB_CHANNEL2 = int(os.environ.get("FORCE_SUB_CHANNEL2", "0"))
+FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1002215102799"))
+FORCE_SUB_CHANNEL2 = int(os.environ.get("FORCE_SUB_CHANNEL2", "-1002001392051"))
 
 if FORCE_SUB_CHANNEL > FORCE_SUB_CHANNEL2:
     temp = FORCE_SUB_CHANNEL2 
@@ -86,13 +86,13 @@ UPI_IMAGE_URL = os.environ.get("UPI_IMAGE_URL", "https://t.me/paymentbot6/2")
 SCREENSHOT_URL = os.environ.get("SCREENSHOT_URL", f"t.me/{OWNER_TAG}")
 #Time and its price
 #7 Days
-PRICE1 = os.environ.get("PRICE1", "30 rs")
+PRICE1 = os.environ.get("PRICE1", "49 rs")
 #1 Month
-PRICE2 = os.environ.get("PRICE2", "110 rs")
+PRICE2 = os.environ.get("PRICE2", "135 rs")
 #3 Month
-PRICE3 = os.environ.get("PRICE3", "299 rs")
+PRICE3 = os.environ.get("PRICE3", "250 rs")
 #6 Month
-PRICE4 = os.environ.get("PRICE4", "550 rs")
+PRICE4 = os.environ.get("PRICE4", "500 rs")
 #1 Year
 PRICE5 = os.environ.get("PRICE5", "999 rs")
 
