@@ -110,9 +110,12 @@ PROTECT_CONTENT = True if os.environ.get("PROTECT_CONTENT", "FALSE") == "TRUE" e
 DISABLE_CHANNEL_BUTTON = True if os.environ.get("DISABLE_CHANNEL_BUTTON", "TRUE") == "TRUE" else False
 #you can add admin inside the bot(bug right now will fix later)
 
-#add admins with space seperated
-# 7148126384 7328629001 6955387260
-ADMINS = os.environ.get("ADMINS", "7148126384 7328629001 6955387260").split()
+try:
+    ADMINS=[]
+    for x in (os.environ.get("ADMINS", "5149937796 6955387260 7328629001 7148126384 ").split()):
+        ADMINS.append(int(x))
+except ValueError:
+        raise Exception("Your Admins list does not contain valid integers.")
 
 
 
