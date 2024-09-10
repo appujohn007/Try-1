@@ -86,15 +86,15 @@ UPI_IMAGE_URL = os.environ.get("UPI_IMAGE_URL", "https://t.me/paymentbot6/2")
 SCREENSHOT_URL = os.environ.get("SCREENSHOT_URL", f"t.me/{OWNER_TAG}")
 #Time and its price
 #7 Days
-PRICE1 = os.environ.get("PRICE1", "49 rs")
+PRICE1 = os.environ.get("PRICE1", "20 rs")
 #1 Month
-PRICE2 = os.environ.get("PRICE2", "135 rs")
+PRICE2 = os.environ.get("PRICE2", "49 rs")
 #3 Month
-PRICE3 = os.environ.get("PRICE3", "250 rs")
+PRICE3 = os.environ.get("PRICE3", "135 rs")
 #6 Month
-PRICE4 = os.environ.get("PRICE4", "500 rs")
+PRICE4 = os.environ.get("PRICE4", "250 rs")
 #1 Year
-PRICE5 = os.environ.get("PRICE5", "999 rs")
+PRICE5 = os.environ.get("PRICE5", "500 rs")
 
 
 
