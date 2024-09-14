@@ -247,18 +247,18 @@ async def start_command(client: Client, message: Message):
             await update_verify_status(id, verify_token=token, link="")
             link = await get_shortlink(SHORTLINK_API_URL, SHORTLINK_API_KEY,f'https://telegram.dog/{client.username}?start=verify_{token}')
             if USE_PAYMENT:
-                btn = [
-                [InlineKeyboardButton("Click Here 👆", url=link),
-                InlineKeyboardButton('How to open this link 👆', url=TUT_VID)],
-                [InlineKeyboardButton("Buy Premium plan", callback_data="buy_prem")]
-                ]
-            else:
-                btn = [
-                [InlineKeyboardButton("Click Here 👆", url=link)],
-                [InlineKeyboardButton('How to open this link 👆', url=TUT_VID)]
-                ]
-            await message.reply(f"Your Ads token is expired, refresh your token and try again. \n\nToken Timeout: {get_exp_time(VERIFY_EXPIRE)}\n\nWhat is the token?\n\nThis is an ads token. If you pass 1 ad, you can use the bot for {get_exp_time(VERIFY_EXPIRE)} after passing the ad", reply_markup=InlineKeyboardMarkup(btn), protect_content=False, quote=True)
-            return
+                try:
+                base64_string = text.split(" ", 1)[1]
+            except:
+                return
+            string = await decode(base64_string)
+            argument = string.split("-")
+            if len(argument) == 3:
+                try:
+                    start = int(int(argument[1]) / abs(client.db_channel.id))
+                    end = int(int(argument[2]) / abs(client.db_channel.id))
+                except:
+                    return
     return
 
 
