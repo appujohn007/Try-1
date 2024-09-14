@@ -204,9 +204,8 @@ async def start_command(client: Client, message: Message):
                     start = int(int(argument[1]) / abs(client.db_channel.id))
                     end = int(int(argument[2]) / abs(client.db_channel.id))
                 except:
-                    return
-                    await message.reply(f"Total clicks {clicks}. Here is your link 👇.", reply_markup=InlineKeyboardMarkup(btn), protect_content=False, quote=True)
-                    return
+              
+                   return
     
     for i in range(1):
         if USE_SHORTLINK and (not U_S_E_P):
